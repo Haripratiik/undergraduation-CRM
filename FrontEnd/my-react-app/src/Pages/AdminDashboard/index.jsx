@@ -185,7 +185,7 @@ export const AdminDashboard = () => {
     const inChatSummary = student.chatHistorySummary && student.chatHistorySummary.toLowerCase().includes(term);
 
     const matchesSearch = !searchTerm || inNameOrEmail || inNotes || inChatSummary || inCountry;
-    const matchesStatus = !statusFilter || student.applicationStatus === inCountry;
+    const matchesStatus = !statusFilter || student.applicationStatus === statusFilter;
     const matchesCountry = !countryFilter || student.country === countryFilter;
     console.log("Student:", student.country);
 
