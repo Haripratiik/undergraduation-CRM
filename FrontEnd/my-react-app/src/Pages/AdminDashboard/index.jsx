@@ -181,11 +181,13 @@ export const AdminDashboard = () => {
         (student.email && student.email.toLowerCase().includes(term));
 
     const inNotes = student.notes && student.notes.toLowerCase().includes(term);
+    const inCountry = student.country && student.country.toLowerCase().includes(term);
     const inChatSummary = student.chatHistorySummary && student.chatHistorySummary.toLowerCase().includes(term);
 
-    const matchesSearch = !searchTerm || inNameOrEmail || inNotes || inChatSummary;
-    const matchesStatus = !statusFilter || student.applicationStatus === statusFilter;
+    const matchesSearch = !searchTerm || inNameOrEmail || inNotes || inChatSummary || inCountry;
+    const matchesStatus = !statusFilter || student.applicationStatus === inCountry;
     const matchesCountry = !countryFilter || student.country === countryFilter;
+    console.log("Student:", student.country);
 
     const matchesQuickFilter = !showNotContacted7Days || isNotContacted7Days(student);
 
