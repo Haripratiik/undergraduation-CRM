@@ -1,0 +1,107 @@
+/* =========================================================================
+   1. Modal Backdrop
+   ========================================================================= */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); /* dashboard style overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* =========================================================================
+   2. Modal Window
+   ========================================================================= */
+.modal {
+    background-color: #ffffff; /* dashboard card style */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 700px;
+    width: 90%;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* =========================================================================
+   3. Modal Sections
+   ========================================================================= */
+.modal-section {
+    margin-bottom: 20px;
+}
+
+.modal-body ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-body li {
+    background-color: #f8f9fa;
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    word-break: break-word;
+    overflow-x: auto;
+}
+
+/* =========================================================================
+   4. Modal Footer Buttons
+   ========================================================================= */
+.modal-footer {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.modal-footer .close-button {
+    background-color: #dc3545; /* dashboard danger */
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .close-button:hover {
+    background-color: #c82333;
+}
+
+/* =========================================================================
+   5. Animations
+   ========================================================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Scrollable section for Login/Application Activity */
+.modal .login-activity-scroll {
+  max-height: 400px;       /* Adjust height as needed */
+  overflow-y: auto;        /* Scroll vertically if content exceeds height */
+  padding-right: 8px;      /* Optional: spacing for scrollbar */
+  margin-top: 10px;
+  border-top: 1px solid #e2e8f0; /* Optional: subtle separation */
+}
+
+.modal .login-activity-scroll ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.modal .login-activity-scroll li {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  word-break: break-word;
+}

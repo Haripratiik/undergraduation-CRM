@@ -1,0 +1,109 @@
+/* Remove default margins and ensure full viewport coverage */
+.no-border-element {
+  border: none; /* Removes all border properties */
+}
+
+/* Auth Page Styles */
+.login-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4CAF50, #81C784);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Logo Image */
+.login-page img.logo {
+  width: 200px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.login-page img.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Welcome text */
+.login-page p:first-of-type {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Sign-in text */
+.login-page p:last-of-type {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Google Sign-in Button */
+.login-with-google-btn {
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+.login-with-google-btn:hover {
+  background-color: #357ae8;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+  transform: translateY(-2px);
+}
+
+/* Google icon inside button */
+.login-with-google-btn::before {
+  content: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg');
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-page img.logo {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+
+  .login-page p:first-of-type {
+    font-size: 28px;
+  }
+
+  .login-page p:last-of-type {
+    font-size: 18px;
+  }
+
+  .login-with-google-btn {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .login-with-google-btn::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+}
